@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Diagnosis Code Search</title>
+    <script src="https://kit.fontawesome.com/4cbb8aa52e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="pageHeader">
+        <img src="Website_logo.png" alt="Company Logo" id="logo">
+        <div class="title-container">
+            <h1>Medical Diagnosis Code Lookup</h1>
+        </div>
+    </header>
+
+
+    <div class="main-content">
+        <div id="searchContainer">
+            <div class="search_box">
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Search anything" autocomplete="off">
+                    <div id="text-preview"></div>
+                    <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="result-box"></div>
+            </div>
+            <div id="information-container">
+                <!-- Content related to the keyword will be displayed here -->
+            </div>
+
+        </div>
+        <script src="search.js"></script>
+    </div>
+</body>
+</html>

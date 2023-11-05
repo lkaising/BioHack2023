@@ -1,0 +1,209 @@
+﻿/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eae8e5; /* This is a very pale scarlet */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    background-color: #ffffff; /* White like a piece of paper */
+    margin: 40px auto; /* Center the paper on the page with some margin around */
+    padding: 20px; /* Space inside the "paper" */
+    max-width: 1100px; /* Max width to mimic a paper size */
+    min-height: 1500px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow to create depth */
+    border-radius: 8px; /* Optionally rounded corners */
+}
+
+::placeholder {
+    color: #555;
+}
+
+/* Header Styles */
+header#pageHeader {
+    background-color: #5a5a5a; /* A soft gray for subtlety */
+    color: #ffffff; /* Almost black for contrast */
+    padding: 1.5em 0; /* Slightly more vertical padding */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Center everything horizontally */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A lighter shadow */
+    position: relative;
+}
+
+#logo {
+    width: 100px; /* Adjust if needed */
+    height: auto;
+    margin-right: 1em; /* Spacing between logo and title */
+}
+
+.title-container {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.title-container h1 {
+    font-size: 2em; /* Make the title larger */
+    font-weight: bold; /* Bold font weight for the title */
+    color: ##ffffff; /* A soft scarlet color for the text */
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* Search Box Styles */
+#searchContainer {
+    color: #333;
+}
+
+.search_box {
+    width: 600px;
+    background: #f2f0f0;
+    margin: 25px auto;
+    border-radius: 5px;
+    position: relative; /* Needed for absolute positioning of children */
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.search_box input {
+    flex: 1;
+    height: 50px;
+    border: 2px solid #606060;
+    font-size: 18px;
+    color: #333;
+    padding: 0 10px 0 20px;
+    background-color: transparent; /* Make sure the input background is transparent */
+    position: relative; /* Ensures that the z-index applies correctly */
+    z-index: 2; /* Makes sure the input is above the text preview layer */
+    outline: none; /* Removes the default focus outline */
+    border-radius: 5px;
+}
+
+.search_box input:focus {
+    border: 2px solid #333; /* Same border style for focused state */
+    /* Additional styles for focus state if needed */
+}
+
+/* Text preview style */
+#text-preview {
+    position: absolute;
+    top: 26.5px; /* Align with the text inside the input box */
+    left: 42px; /* Align with the text inside the input box */
+    font-size: 18px; /* Should match the input box font size */
+    color: #333; /* Set the color to match your input text color */
+    pointer-events: none; /* Ensure clicks go through to the input box */
+    white-space: nowrap; /* Preserve whitespace and formatting */
+    overflow: hidden; /* Hide overflow text */
+    z-index: 1; /* Ensure the text preview is below the input field */
+    max-width: calc(100% - 125px);
+}
+
+.search_box button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0 15px;
+}
+
+.result-item:hover {
+    background-color: #f5f5f5; /* Highlight the item on hover */
+}
+
+/* Remove the placeholder style as it's no longer needed */
+/*.input-preview::placeholder {
+    color: grey;
+    /* Other styles to make the placeholder look like a preview text */
+/*}*/
+
+/* Icon Adjustments */
+.search_box button i,
+.search_box button .fa {
+    margin-left: 10px;
+}
+
+button .fa-solid {
+    color: #555;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Result Box Styles */
+.result-box {
+    width: 600px;
+    background: #f2f0f0;
+    margin: 0 auto 20px;
+    margin-right: calc((100% - 600px) / 2 + 20px);
+    border-radius: 5px;
+    position: relative;
+    max-height: 300px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.result-box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.result-box ul li {
+    background: #f2f0f0;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.result-box ul li:hover {
+    background-color: #f5f5f5;
+}
+
+/* Scrollbar Styles */
+.result-box::-webkit-scrollbar {
+    width: 12px;
+}
+
+.result-box::-webkit-scrollbar-track {
+    background: #d3d3d3;
+    border-radius: 10px;
+}
+
+.result-box::-webkit-scrollbar-thumb {
+    background: #a9a9a9;
+    border-radius: 10px;
+    border: 2px solid #d3d3d3;
+}
+
+.result-box::-webkit-scrollbar-thumb:hover {
+    background: #808080;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #d3d3d3;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #a9a9a9;
+    border-radius: 10px;
+    border: 2px solid #d3d3d3;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #808080;
+}
